@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Love ❤️</title>
+<style>
+  body { margin:0; background:#ffeef8; font-family:'Arial'; text-align:center; }
+  nav { background:#ff758c; padding:15px; }
+  nav a { color:white; text-decoration:none; margin:0 15px; font-weight:bold; }
+  h1 { color:#e91e63; margin-top:30px; }
+  .floating { position:fixed; font-size:30px; animation:float 6s infinite; }
+  @keyframes float { 0%{transform:translateY(100vh) rotate(0deg); opacity:1;} 100%{transform:translateY(-10vh) rotate(360deg); opacity:0;} }
+</style>
+</head>
+<body>
+<nav>
+  <a href="home.html">Home</a>
+  <a href="love1000.html">1000 Reasons</a>
+  <a href="suggestions.html">For You</a>
+</nav>
+
+<h1>Happy Anniversary hammad Mustafa jee! 💕</h1>
+<p>1 saal tumhare saath = sabse pyara saal</p>
+<button onclick="createHeart()">Click for Hearts</button>
+
+<script>
+// Floating hearts animation
+function createHeart(){
+  let heart = document.createElement('div');
+  heart.className = 'floating';
+  heart.innerHTML = '❤️';
+  heart.style.left = Math.random()*100 + 'vw';
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(), 6000);
+}
+setInterval(createHeart, 300);
+</script>
+</body>
+</html>
