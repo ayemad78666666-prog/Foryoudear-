@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>1000 Reasons I Love You</title>
+<style>
+  body { background:#fff0f5; font-family:'Arial'; padding:20px; }
+  nav { background:#ff758c; padding:15px; text-align:center; position:sticky; top:0; }
+  nav a { color:white; text-decoration:none; margin:0 15px; font-weight:bold; }
+  .line { background:white; margin:8px; padding:15px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+  h1 { text-align:center; color:#e91e63; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="home.html">Home</a>
+  <a href="love1000.html">1000 Reasons</a>
+  <a href="suggestions.html">For You</a>
+</nav>
+
+<h1>1000 Reasons I Love You ❤️</h1>
+<div id="lines"></div>
+
+<script>
+let reasons = [
+"I love your smile", "I love your eyes", "I love your voice", "I love your hug", "I love your care",
+"I love the way you talk to me", "I love how you make me laugh", "I love your kindness", "I love your honesty", "I love your support",
+"I love spending time with you", "I love your silly jokes", "I love your intelligent talks", "I love how you understand me", "I love your patience",
+"I love the way you say my name", "I love your good morning messages", "I love your good night texts", "I love how you miss me", "I love how you love me",
+"I love your beautiful heart", "I love your cute anger", "I love your cute fights", "I love your makeup", "I love your simple look",
+"I love your cooking", "I love your taste in music", "I love your favorite songs", "I love dancing with you", "I love walking with you",
+"I love your dreams", "I love your goals", "I love your ambition", "I love how you care for family", "I love how you care for friends",
+"I love your handwriting", "I love your photos", "I love your selfies", "I love your random calls", "I love your long calls",
+"I love your advice", "I love your suggestions", "I love how you motivate me", "I love how you believe in me", "I love your faith in us",
+"I love rainy days with you", "I love sunny days with you", "I love winter with you", "I love summer with you", "I love every season with you",
+"I love our memories", "I love our first meeting", "I love our first chat", "I love our first date", "I love our promises",
+"I love your past, present, future", "I love your flaws", "I love your perfections", "I love you when you are happy", "I love you when you are sad",
+"I love wiping your tears", "I love seeing you smile", "I love making you smile", "I love your sarcasm", "I love your seriousness",
+"I love your food choices", "I love your shopping", "I love your style", "I love your perfume", "I love your presence",
+"I love your absence makes me miss you", "I love your jealousy", "I love your possessiveness", "I love your protection", "I love your loyalty",
+"I love your surprises", "I love your gifts", "I love your letters", "I love your notes", "I love everything about you"
+];
+
+// 1000 lines generate karne ke liye loop
+let container = document.getElementById('lines');
+for(let i=1; i<=1000; i++){
+  let text = reasons[i % reasons.length] + " " + i; // har line unique ban jayegi
+  container.innerHTML += `<div class="line">${i}. ${text}</div>`;
+}
+</script>
+</body>
+</html>
