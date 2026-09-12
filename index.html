@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+<style>
+  body { margin:0; height:100vh; display:flex; justify-content:center; align-items:center; 
+         background: linear-gradient(135deg, #ff758c, #ff7eb3); font-family: 'Arial'; overflow:hidden; }
+  .box { background:white; padding:40px; border-radius:20px; text-align:center; box-shadow:0 10px 40px rgba(0,0,0,0.3); animation:pop 1s; }
+  @keyframes pop { from{transform:scale(0.5); opacity:0;} to{transform:scale(1); opacity:1;} }
+  input { padding:12px; border:2px solid #ff758c; border-radius:10px; width:200px; margin:10px; }
+  button { padding:12px 30px; background:#ff758c; color:white; border:none; border-radius:10px; cursor:pointer; font-size:16px; }
+  button:hover { background:#e91e63; }
+  .heart { font-size:60px; animation:beat 1s infinite; }
+  @keyframes beat { 0%,100%{transform:scale(1);} 50%{transform:scale(1.3);} }
+  #error { color:red; }
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="heart">💖</div>
+  <h1>Enter Our Secret</h1>
+  <input type="password" id="pass" placeholder="Our Date: DDMMYYYY">
+  <br><button onclick="unlock()">Unlock My Heart</button>
+  <p id="error"></p>
+</div>
+<script>
+function unlock(){
+  if(document.getElementById('pass').value === "20092025"){ // apni date daalo
+    window.location.href = "home.html";
+  } else {
+    document.getElementById('error').innerText = "Galat password baby 😢";
+  }
+}
+</script>
+</body>
+</html>
